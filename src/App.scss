@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 62.5%; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+  font-size: 1.6rem;
+  // background-color: #3D3D33;
+}
+// HEADER
+
+header {
+  // background-color:	#D8F9E4 ;
+  nav{
+    width: 90%;
+    margin: 0 auto; 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    height: 20vh;
+    .logo {
+      width: 80%;;
+    }
+    .nav-links{
+      display: flex; 
+      align-items: center;
+      ul{
+        .flagb{
+          border-right: solid 1px #3D3D33;
+        }
+       li{
+        padding: 0 1.5rem;
+        display: inline-block;
+       .flag {
+        width: 2.5rem;
+        }
+       }
+      }
+    }
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+// HERO BANNER
+// .hero-banner{
+//   .bg{
+//     background-image: url(img/bg3.jpg);
+//     width: 85vw;
+//     height: 80vh;
+//     background-size: cover;
+//     border-radius: 5rem;
+//     margin: 0 auto;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     .bg-text{
 
-.App-link {
-  color: #61dafb;
-}
+//     }
+//   }
+// }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.hero-banner{
+  width: 90%;
+  margin: 0 auto;
+  // margin-top: 2rem;
+  .hero-banner-container{
+    display: flex;
+    // flex-wrap: wrap;
+    justify-content: space-between;
+    .hero-banner-text{
+      flex-basis: 45%;
+      margin:  auto 0;
+      h1{
+        font-family: 'Urbanist', sans-serif;
+        font-size: 4rem;
+        margin: 1rem 0;
+      }
+      h2{
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 2rem;
+        font-weight: 100;
+        margin: 1rem 0;
+      }
+    }
+    .hero-banner-logo{
+      flex-basis: 55%;
+      img{
+        width: 90%;
+        margin-left: 8rem;
+      }
+    }
   }
 }

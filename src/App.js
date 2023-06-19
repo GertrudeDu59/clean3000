@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.scss';
+import ilustration from "./img/ilustration.jpg"
+import { Button} from 'antd';
 
-function App() {
+import React from 'react'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <section className="hero-banner">
+      <div className="hero-banner-container">
+        <div className="hero-banner-text">
+          <h1>Pureté éthique et écologique : votre solution de nettoyage de vitres</h1>
+          <h2>Révélez la clarté éthique et écologique à travers nos services de nettoyage de vitres, car chaque vue mérite d'être immaculée</h2>
+          <Button>En savoir plus</Button>
+        </div>
+        <div className="hero-banner-logo">
+          <img src= {ilustration} alt=""className='logo' />
+        </div>
+      </div>
+    </section>
+    
+  )
 }
 
-export default App;
+export default App
