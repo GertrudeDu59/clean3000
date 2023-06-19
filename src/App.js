@@ -1,11 +1,12 @@
 import './App.scss';
+import About from './components/Box';
 import ilustration from "./img/ilustration.jpg"
 import { Button} from 'antd';
-
-import React from 'react'
+import React, { Fragment } from 'react'
 
 const App = () => {
   return (
+    <>
     <section className="hero-banner">
       <div className="hero-banner-container">
         <div className="hero-banner-text">
@@ -18,7 +19,8 @@ const App = () => {
         </div>
       </div>
     </section>
-    
+    <About/>
+    </>
   )
 }
 

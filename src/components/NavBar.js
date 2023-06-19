@@ -11,7 +11,8 @@ const NavBar = () => {
     <header>
         <nav>
             <Link to="/">
-            <img src= {LogoTransparant} alt=""className='logo' />
+            {/* <img src= {LogoTransparant} alt=""className='logo' /> */}
+            <h1>Clean3000</h1>
             </Link>
             <div className="nav-links">
                 <ul>
