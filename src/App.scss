@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@1,200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@1,100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
 
 * {
   box-sizing: border-box;
@@ -29,6 +30,11 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 20vh;
+    h1{ 
+      font-family: 'M PLUS Rounded 1c', sans-serif;
+      font-size: 5rem;
+      color: #3D3D33;
+    }
     .logo {
       width: 80%;;
     }
@@ -80,12 +86,12 @@ header {
     .hero-banner-text{
       flex-basis: 45%;
       margin:  auto 0;
-      h1{
+      h2{
         font-family: 'Urbanist', sans-serif;
         font-size: 4rem;
         margin: 1rem 0;
       }
-      h2{
+      h3{
         font-family: 'Rajdhani', sans-serif;
         font-size: 2rem;
         font-weight: 100;
@@ -181,5 +187,20 @@ header {
       width:100%;
     }
     flex-basis: 30%;
+  }
+}
+
+
+.avis{
+  width: 70% ;
+  margin: 5rem auto;
+  .avis-container{
+    hr{
+      margin: 5rem 0;
+    }
+    .btn {
+      display: flex;
+      justify-content: center;
+     }
   }
 }

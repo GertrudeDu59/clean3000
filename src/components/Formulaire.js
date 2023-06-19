@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const Formulaire = () => {
   const dispatch = useDispatch();
-  const { name, date, comment } = useSelector((state) => state.formulaire || {});
+  const { name, date, comment } = useSelector((state) => state.data || {});
 
 
   const handleNameChange = (e) => {
@@ -23,12 +23,13 @@ const Formulaire = () => {
   };
 
   const handleSubmit = (e) => {
+    // Utilisez e.preventDefault() pour empêcher le comportement par défaut du formulaire
     e.preventDefault();
+    // Le reste de votre logique de soumission du formulaire
     dispatch(resetFormulaire());
   };
   return (
-    <Form
-    onFinish={handleSubmit}
+    <Form onFinish={handleSubmit}
     name="wrap"
     labelCol={{
       flex: '110px',

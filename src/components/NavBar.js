@@ -1,8 +1,9 @@
 import React from 'react'
-import {BiUser} from 'react-icons/bi' 
+import {BiUser} from 'react-icons/bi'
+import {FaLeaf} from 'react-icons/fa'
 import France from "../img/france.png";
 import  {Link} from "react-router-dom"
-import LogoTransparant from "../img/lt.png"
+
 
 
 
@@ -12,7 +13,8 @@ const NavBar = () => {
         <nav>
             <Link to="/">
             {/* <img src= {LogoTransparant} alt=""className='logo' /> */}
-            <h1>Clean3000</h1>
+            <h1>Clean3000<FaLeaf color='green'/></h1>
+            
             </Link>
             <div className="nav-links">
                 <ul>
