@@ -13,6 +13,7 @@ const store = configureStore({
       data: dataReducer
   }
 });
+// export default store;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

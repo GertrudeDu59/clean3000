@@ -1,9 +1,34 @@
 import { Button, Form, Input, DatePicker, Upload} from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
 import AddAvis from '../routes/AddAvis';
-const Formulaire = () => (
+import { dataName, dataDate, dataComment, resetFormulaire } from '../slices';
+import { useDispatch, useSelector } from 'react-redux';
 
-  <Form
+
+const Formulaire = () => {
+  const dispatch = useDispatch();
+  const { name, date, comment } = useSelector((state) => state.formulaire || {});
+
+
+  const handleNameChange = (e) => {
+    dispatch(dataName(e.target.value));
+  };
+
+  const handleDateChange = (date) => {
+    dispatch(dataDate(date));
+  };
+
+  const handleCommentChange = (e) => {
+    dispatch(dataComment(e.target.value));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(resetFormulaire());
+  };
+  return (
+    <Form
+    onFinish={handleSubmit}
     name="wrap"
     labelCol={{
       flex: '110px',
@@ -21,18 +46,19 @@ const Formulaire = () => (
     <Form.Item
       label="Nom de l'entreprise"
       name="Nom de l'entreprise ou du client"
+      
     >
-      <Input />
+      <Input value={name} onChange={handleNameChange}/>
     </Form.Item>
 
     
     <Form.Item label="Date d'intervantion">
-        <DatePicker />
+        <DatePicker value={date} onChange={handleDateChange} />
       </Form.Item>
 
 
     <Form.Item name={['user', 'introduction']} label="Observations">
-      <Input.TextArea />
+      <Input.TextArea value={comment} onChange={handleCommentChange}/>
     </Form.Item>
 
 
@@ -44,14 +70,11 @@ const Formulaire = () => (
             </div>
           </Upload>
     </Form.Item>
-
-    <Form.Item label="">
-        <Button type="primary" htmlType="submit">
-        Envoyer
-        </Button>
-    </Form.Item>
-    
+    <Form.Item>
+        <Button type="primary" htmlType="submit">Envoyer</Button>
+      </Form.Item>
   </Form>
+  )
+}
 
-);
-export default Formulaire;
+export default Formulaire
